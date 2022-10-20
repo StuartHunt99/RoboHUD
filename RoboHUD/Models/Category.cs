@@ -1,4 +1,5 @@
 ﻿//using System;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 namespace RoboHUD.Models;
 
@@ -12,7 +13,10 @@ public class Category
 	[Required]
 	public string Name { get; set; }
 
+	[DisplayName("Display Order")]
 	public int DisplayOrder { get; set; }
+
+	[DisplayName("Date and Time")]
 
 	public DateTime CreatedDateTime { get; set; } = DateTime.Now;
 
